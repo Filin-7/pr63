@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестування для учнів початкових класів</title>
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "apple";
+            const userAnswer = document.querySelector('input[name="question"]:checked').value;
+
+            if (userAnswer === correctAnswer) {
+                alert("Правильно! Молодець!");
+            } else {
+                alert("Неправильно. Спробуй ще раз.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Тестування для учнів початкових класів</h1>
+    <p>Питання: Що можна їсти?</p>
+    <form>
+        <input type="radio" id="apple" name="question" value="apple">
+        <label for="apple">Яблуко</label><br>
+        <input type="radio" id="stone" name="question" value="stone">
+        <label for="stone">Камінь</label><br>
+        <input type="radio" id="toy" name="question" value="toy">
+        <label for="toy">Іграшка</label><br><br>
+        <button type="button" onclick="checkAnswer()">Перевірити відповідь</button>
+    </form>
+</body>
+</html>
